@@ -54,14 +54,14 @@ export default function loadSWT(CCVLib) {
    *
    * @return {Array<Roi>} - Array of regions that contains text.
    */
-  function strokeWidthTransform(image, options) {
+  function strokeWidthTransform(imageData, options) {
     options = Object.assign({}, defaultOptions, options);
 
-    var imageData = {
+    /* var imageData = {
       width: image.width,
       height: image.height,
       data: image.getRGBAData()
-    };
+    }; */
 
     const denseMatrix = new CCVLib.ccv_dense_matrix_t();
     CCVLib.ccv_read(imageData, denseMatrix);
